@@ -1,53 +1,93 @@
-body {
+/* Reset some basics */
+* {
+    box-sizing: border-box;
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f5f5f5;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: #f9f9f9;
+    color: #333;
 }
 
 header {
     background: #fc8019;
-    color: white;
-    padding: 15px;
+    padding: 20px;
     text-align: center;
-    font-size: 22px;
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .container {
-    background: white;
-    width: 320px;
-    margin: 40px auto;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    background: #fff;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.15);
 }
 
-.container h2 {
-    margin-bottom: 15px;
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 500;
+    color: #fc8019;
 }
 
-select, input {
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+select, input[type="number"] {
     width: 100%;
-    padding: 10px;
-    margin: 8px 0;
+    padding: 12px 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+select:focus, input[type="number"]:focus {
+    border-color: #fc8019;
+    outline: none;
+    box-shadow: 0 0 6px rgba(252, 128, 25, 0.3);
 }
 
 button {
     width: 100%;
-    padding: 12px;
+    padding: 14px;
     background: #fc8019;
     color: white;
     border: none;
+    border-radius: 8px;
     font-size: 16px;
+    font-weight: 500;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 button:hover {
     background: #e76f00;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-pre {
-    margin-top: 15px;
+.result {
+    margin-top: 20px;
     background: #f0f0f0;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 15px;
+    border-radius: 8px;
+    min-height: 50px;
+    font-weight: 500;
+    color: #555;
+    white-space: pre-wrap;
+    text-align: center;
 }

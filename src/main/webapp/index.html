@@ -1,29 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Swiggy Mini</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header>🍔 Swiggy Mini App</header>
+<header>
+    <div class="logo">🍔 Swiggy Mini App</div>
+</header>
 
-<div class="container">
-    <h2>Order Your Food</h2>
+<main class="container">
+    <h2>Order Your Favorite Food</h2>
 
-    <select id="item">
-        <option value="Burger">Burger - ₹120</option>
-        <option value="Pizza">Pizza - ₹250</option>
-        <option value="Biryani">Biryani - ₹200</option>
-        <option value="Dosa">Dosa - ₹80</option>
-    </select>
+    <div class="form-group">
+        <label for="item">Select Item:</label>
+        <select id="item">
+            <option value="Burger" data-price="120">Burger - ₹120</option>
+            <option value="Pizza" data-price="250">Pizza - ₹250</option>
+            <option value="Biryani" data-price="200">Biryani - ₹200</option>
+            <option value="Dosa" data-price="80">Dosa - ₹80</option>
+        </select>
+    </div>
 
-    <input type="number" id="quantity" value="1" min="1">
+    <div class="form-group">
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" value="1" min="1">
+    </div>
 
     <button onclick="placeOrder()">Place Order</button>
 
-    <pre id="result"></pre>
-</div>
+    <div id="result" class="result"></div>
+</main>
 
 <script src="script.js"></script>
 </body>
