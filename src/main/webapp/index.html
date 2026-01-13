@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Swiggy Mini</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>🍔 Swiggy Mini App</header>
+
+<div class="container">
+    <h2>Order Your Food</h2>
+
+    <select id="item">
+        <option value="Burger">Burger - ₹120</option>
+        <option value="Pizza">Pizza - ₹250</option>
+        <option value="Biryani">Biryani - ₹200</option>
+        <option value="Dosa">Dosa - ₹80</option>
+    </select>
+
+    <input type="number" id="quantity" value="1" min="1">
+
+    <button onclick="placeOrder()">Place Order</button>
+
+    <pre id="result"></pre>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
